@@ -20,7 +20,7 @@ describe('Testes da função HandlerElephants', () => {
     expect(handlerElephants('availability')).toBe(['Friday', 'Saturday', 'Sunday', 'Tuesday']);
   });
   test('retorna null ', () => {
-    expect(handlerElephants('')).toEqual(null);
+    expect(handlerElephants('')).toBeNull();
   });
   test('retorna msg de parametro invalido quando passado algo que nao seja string', () => {
     expect(handlerElephants(2)).toBe('Parâmetro inválido, é necessário uma string');
