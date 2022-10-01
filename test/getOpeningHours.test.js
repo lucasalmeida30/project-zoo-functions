@@ -12,10 +12,12 @@ describe('Testes da função getOpeningHours', () => {
     expect(getOpeningHours('wednesday', '09:00-PM')).toBe('The zoo is closed');
   });
   test('se retorna throw new erro quando passado argumento inválido', () => {
-    expect(getOpeningHours('wednesday', '09:30AM')).toThrow();
-    expect(getOpeningHours('wednesday', '09:30')).toThrow();
-    expect(getOpeningHours('wednesday', '13:00-PM')).toThrow();
-    expect(getOpeningHours('wednesday', '09:70-PM')).toThrow();
-    expect(getOpeningHours('domingo', '09:30-AM')).toThrow();
+    expect(() => getOpeningHours('wednesday', '09:30AM')).toThrow();
+    expect(() => getOpeningHours('wednesday', '09:30')).toThrow();
+    expect(() => getOpeningHours('wednesday', '13:00-PM')).toThrow();
+    expect(() => getOpeningHours('wednesday', '09:70-PM')).toThrow();
+    expect(() => getOpeningHours('domingo', '09:30-AM')).toThrow();
+    expect(() => getOpeningHours('wednesday', '12:00-AM')).toThrow();
+    expect(getOpeningHours(0, 0)).toBe('The zoo is closed');
   });
 });
