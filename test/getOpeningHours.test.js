@@ -18,6 +18,5 @@ describe('Testes da função getOpeningHours', () => {
     expect(() => getOpeningHours('wednesday', '09:70-PM')).toThrow();
     expect(() => getOpeningHours('domingo', '09:30-AM')).toThrow();
     expect(() => getOpeningHours('wednesday', '12:00-AM')).toThrow();
-    expect(getOpeningHours(0, 0)).toBe('The zoo is closed');
   });
 });
