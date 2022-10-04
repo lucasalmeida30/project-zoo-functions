@@ -5,7 +5,7 @@ describe('Testes da função HandlerElephants', () => {
     expect(handlerElephants('count')).toBe(4);
   });
   test('retorna um array com nomes dos elefantes', () => {
-    expect(handlerElephants('names')).toBe(['Ilana', 'Orval', 'Bea', 'Jefferson']);
+    expect(handlerElephants('names')).toEqual(['Ilana', 'Orval', 'Bea', 'Jefferson']);
   });
   test('retorna a media de idades dos elefantes', () => {
     expect(handlerElephants('averageAge')).toBe(10.5);
@@ -17,7 +17,7 @@ describe('Testes da função HandlerElephants', () => {
     expect(handlerElephants('popularity')).toBe(5);
   });
   test('retorna um array com a relação de dias em que é possível visitar os elefantes', () => {
-    expect(handlerElephants('availability')).toBe(['Friday', 'Saturday', 'Sunday', 'Tuesday']);
+    expect(handlerElephants('availability')).toEqual(['Friday', 'Saturday', 'Sunday', 'Tuesday']);
   });
   test('retorna null ', () => {
     expect(handlerElephants('')).toBeNull();
